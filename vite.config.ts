@@ -3,11 +3,12 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
+// https://vitejs.dev/config/// ...existing code...
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    allowedHosts: ["community-forms.onrender.com"], // <-- Add this line
   },
   plugins: [
     react(),
@@ -20,3 +21,4 @@ export default defineConfig(({ mode }) => ({
     },
   },
 }));
+// ...existing code...;
